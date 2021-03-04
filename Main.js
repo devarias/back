@@ -16,6 +16,6 @@ app.get('/api/v1/info/companies', (req, res) => {
   res.json({ name: 'Umbrella' });
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`listening on ${port}`);
 });
