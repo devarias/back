@@ -6,7 +6,7 @@ const port = 5000;
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.json({ name: 'Home' });
+  res.json({ name: 'Home', email: '1808@gmail.com' });
 });
 
 app.get('/api/v1/info/mentors', (req, res) => {
