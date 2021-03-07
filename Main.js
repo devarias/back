@@ -1,20 +1,38 @@
 const express = require('express');
-const app = express();
+// var nodemailer = require('nodemailer');
 const cors = require('cors');
+const app = express();
 const port = 5000;
-
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.json({ name: 'Home', email: '1808@gmail.com' });
-});
+// var transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: 'finalprojectc12med@gmail.com',
+//     pass: 'HolbertonC12',
+//   },
+// });
 
-app.get('/api/v1/info/mentors', (req, res) => {
-  res.json({ name: 'Dev' });
+// var mailOptions = {
+//   from: 'finalprojectc12med@gmail.com',
+//   to: '1808@holbertonschool.com',
+//   subject: 'Sending Email using Node.js',
+//   text: 'That was easy!',
+// };
+
+app.get('/', (req, res) => {
+  // transporter.sendMail(mailOptions, function (error, info) {
+  //   if (error) {
+  //     console.log(error);
+  //   } else {
+  //     console.log('Email sent: ' + info.response);
+  //   }
+  // });
+  // res.send('Email sent successfully');
 });
-app.get('/api/v1/info/companies', (req, res) => {
-  res.json({ name: 'Umbrella' });
-});
+const interval = setInterval(function () {
+  console.log('Every 10 seconds');
+}, 5000);
 
 app.listen(process.env.PORT || port, () => {
   console.log(`listening on ${port}`);
