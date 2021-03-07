@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
   //     console.log('Email sent: ' + info.response);
   //   }
   // });
-  // res.send('Email sent successfully');
+  res.send('I am here');
 });
 const interval = setInterval(function () {
   console.log('Every 10 seconds');
