@@ -28,17 +28,16 @@ app.get('/', (req, res) => {
   //     console.log('Email sent: ' + info.response);
   //   }
   // });
+  setInterval(tick, 1000);
   res.send('I am here');
 });
 function tick() {
   let mins = new Date().getMinutes();
-  if (mins == '56') {
+  if (mins == '00') {
     alert('Do stuff');
   }
   console.log('Tick ' + mins);
 }
-
-setInterval(tick, 1000);
 
 app.listen(process.env.PORT || port, () => {
   console.log(`listening on ${port}`);
