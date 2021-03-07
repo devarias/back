@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 });
 function tick() {
   let mins = new Date().getMinutes();
-  if (mins == '53') {
+  if (mins == '56') {
     alert('Do stuff');
   }
   console.log('Tick ' + mins);
