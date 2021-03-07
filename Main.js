@@ -30,9 +30,15 @@ app.get('/', (req, res) => {
   // });
   res.send('I am here');
 });
-const interval = setInterval(function () {
-  console.log('Every 10 seconds');
-}, 5000);
+function tick() {
+  let mins = new Date().getMinutes();
+  if (mins == '53') {
+    alert('Do stuff');
+  }
+  console.log('Tick ' + mins);
+}
+
+setInterval(tick, 1000);
 
 app.listen(process.env.PORT || port, () => {
   console.log(`listening on ${port}`);
